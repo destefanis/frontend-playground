@@ -1,0 +1,121 @@
+/**
+ * Define the device styles.
+ */
+
+.device-title {
+  text-align: center;
+  font-size: 3.2rem;
+  color: #444;
+ }
+
+.device {
+  position: relative;
+  margin: 0 auto;
+}
+
+.device {
+  margin: 3em 0;
+  width: 100%;
+  text-align: center;
+}
+
+.device-image-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.device__image {
+  position: relative;
+  height: 384px;
+  width: auto;
+  z-index: 1;
+
+  @include min($xlarge) {
+    height: 500px;
+  }
+}
+
+
+// Set up our key variables and css variables.
+$keyHeight: 36px;
+$keyWidth: 36px;
+
+$keyWidthLarge: 48px;
+
+// Namespace of our base class.
+$class-slug: key !default
+
+// First Row Variables
+$qwertyRowTop: 161px;
+$qwertyRowLeft: 193 !default
+
+$qwertyRowTopLarge: 208px;
+$qwertyRowLeftLarge: 251 !default
+
+&:root {
+  --keyHeight: 36px;
+  --keyWidth: 36px;
+
+  @include min($xlarge) {
+    --keyHeight: 48px;
+    --keyWidth: 48px;
+  }
+}
+
+// Base Key Styles
+.key {
+  position: absolute;
+  width: var(--keyHeight);
+  height: var(--keyWidth);
+  display: block;
+  border: 2px solid #f00;
+  border-radius: 5px;
+  z-index: 2;
+  transition: border-color 75ms ease;
+  cursor: pointer;
+
+  @include min($xlarge) {
+    border-color: blue;
+  }
+
+  &:hover {
+    border-color: $white;
+  }
+}
+
+// Main Keys
+.key--1 {
+  top: $qwertyRowTop;
+  left: $qwertyRowLeft * 1px;
+
+  @include min($xlarge) {
+    top: $qwertyRowTopLarge;
+    left: $qwertyRowLeftLarge * 1px;
+  }
+}
+
+// Loop through the QWERTY keys.
+@for $i from 2 through 13 {
+  $qwertyRowLeft: ($qwertyRowLeft + $keyWidth + 6);
+  $qwertyRowLeftLarge: (($qwertyRowLeftLarge + $keyWidthLarge) + 6.5);
+
+  .#{$class-slug}--#{$i} {
+    top: $qwertyRowTop;
+    left: $qwertyRowLeft;
+
+    @include min($xlarge) {
+      top: $qwertyRowTopLarge;
+      left: $qwertyRowLeftLarge;
+    }
+  
+    // If it's the / key, its a bit wider.
+    @if $i == 13 {
+      width: 56px;
+
+      @include min($xlarge) {
+        width: 76px;
+      }
+    }
+  }
+}
+
