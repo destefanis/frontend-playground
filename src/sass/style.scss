@@ -2,12 +2,17 @@
 @import "reset";
 
 // PARTIALS
-
+@import "fonts";
 @import "vars";
 @import "base";
 @import "z-index";
 
 // COMPONENTS
 @import "components/_device.scss";
+@import "components/_feature-nav.scss";
+@import "components/_utility-buttons.scss";
+@import "components/_device-sidebar.scss";
+@import "components/_preset-dropdown.scss";
+@import "components/_selection-tools.scss";
 
 // SECTIONS

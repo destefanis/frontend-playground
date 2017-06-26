@@ -1,21 +1,178 @@
 <!DOCTYPE html>
 
 <html lang="en-US">
-  <head>
-    <title></title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-      
-    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600" rel="stylesheet">
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <h1 class="device-title">Device Window</h1>
+  <section class="config-wrapper">
+    <h1 class="config-title">Configuration: Default</h1>
+
+    <aside class="device-sidebar">
+      <ul class="sidebar-tabs">
+        <li class="sidebar-tabs__item is-active">
+          Active
+        </li>
+        <li class="sidebar-tabs__item">
+          Reactive
+        </li>
+      </ul>
+      <div class="sidebar-pane">
+        <div class="effects">
+          Effects Placeholder
+        </div>
+        
+        <div class="selection-tools-container">
+          <div class="tool-label-wrapper">
+            <h4 class="tool-label">Selection Tools</h4>
+            <span class="tool-label-help">
+              ?
+            </span>
+          </div>
+          <ul class="section-tools">
+            <li class="selection-tool is-active">
+              <div class="selection-tool-content">
+                <span class="selection-tool__icon">
+                  @include('svg/selection-tools__pointer.svg')
+                </span>
+                <span class="selection-tool__label">
+                  Single Select
+                </span>
+              </div>
+            </li>
+            <li class="selection-tool">
+              <div class="selection-tool-content">
+                <span class="selection-tool__icon">
+                  @include('svg/selection-tools__box.svg')
+                </span>
+                <span class="selection-tool__label">
+                  Group / Box Select
+                </span>
+              </div>
+            </li>
+            <li class="selection-tool selection-tool--dropdown">
+              <div class="selection-tool-content selection-tool-content--dropdown">
+                <span class="selection-tool__label">
+                  Additional Tools
+                </span>
+                <span class="selection-tool__icon">
+                  @include('svg/arrow.svg')
+                </span>
+              </div>
+
+              <!-- Submenu -->
+              <ul class="secondary-selection-tools">
+                <li class="selection-tool">
+                  <div class="selection-tool-content">
+                    <span class="selection-tool__icon">
+                      @include('svg/selection-tools__eraser.svg')
+                    </span>
+                    <span class="selection-tool__label">
+                      Eraser
+                    </span>
+                  </div>
+                </li>
+                <li class="selection-tool">
+                  <div class="selection-tool-content">
+                    <span class="selection-tool__icon">
+                      @include('svg/selection-tools__paint-brush.svg')
+                    </span>
+                    <span class="selection-tool__label">
+                      Paintbrush
+                    </span>
+                  </div>
+                </li>
+                <li class="selection-tool">
+                  <div class="selection-tool-content">
+                    <span class="selection-tool__icon">
+                      @include('svg/selection-tools__paint-bucket.svg')
+                    </span>
+                    <span class="selection-tool__label">
+                      Bucket
+                    </span>
+                  </div>
+                </li>
+                <li class="selection-tool">
+                  <div class="selection-tool-content">
+                    <span class="selection-tool__icon">
+                      @include('svg/selection-tools__paint-bucket.svg')
+                    </span>
+                    <span class="selection-tool__label">
+                      Wand
+                    </span>
+                  </div>
+                </li>
+                <li class="selection-tool">
+                  <div class="selection-tool-content">
+                    <span class="selection-tool__icon">
+                      @include('svg/selection-tools__eye-dropper.svg')
+                    </span>
+                    <span class="selection-tool__label">
+                      Effect Grabber
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="presets">
+        <div class="tool-label-wrapper">
+          <h4 class="tool-label">Presets</h4>
+          <span class="tool-label-help">
+            ?
+          </span>
+        </div>
+      </div>
+    </aside>
 
     <div class="device">
+      
+      <div class="device-controls">
+        <div class="utility-buttons">
+          <div class="utility-button">
+            <span class="utility-button__icon">
+              @include('svg/selection-tools__undo.svg')
+            </span>
+            <span class="utility-button__label">
+              Undo
+            </span>
+          </div>
+          <div class="utility-button utility-button--redo utility-button--disabled">
+            <span class="utility-button__icon">
+              @include('svg/selection-tools__undo.svg')
+            </span>
+            <span class="utility-button__label">
+              Redo
+            </span>
+          </div>
+        </div>
+
+        <nav class="features">
+          <h2 class="features__heading">M800 Product Features</h2>
+          <ul class="feature__list">
+            <li class="feature__list-item">
+              Key Bindings
+            </li>
+            <li class="feature__list-item is-active">
+              Illumination
+            </li>
+            <li class="feature__list-item">
+              Settings
+            </li>
+          </ul>
+        </nav>
+      </div>
+
       <div class="device-image-wrapper">
 
         <img class="device__image" src="images/m800-us.png" alt="Apex M800">
@@ -48,7 +205,8 @@
         </div>
       </div>
     </div>
+  </section>
 
-    <script src="bundle.js"></script>
-  </body>
+  <script src="bundle.js"></script>
+</body>
 </html>

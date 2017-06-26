@@ -1,0 +1,71 @@
+// Undo and Redo
+.utility-buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: $sans;
+}
+
+.utility-button {
+  display: inline-block;
+  text-align: center;
+  color: $white;
+  cursor: pointer;
+
+  &:hover {
+    .utility-button__icon {
+      background: #252525;
+
+      svg {
+        transform: translateY(-1px);
+      }
+    }
+  }
+
+  &.utility-button--disabled {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+}
+
+.utility-button--redo {
+  margin-left: 15px;
+
+  &:hover {
+    .utility-button__icon {
+      svg {
+        transform: translateY(-1px) scaleX(-1);
+      }
+    }
+  }
+
+  svg {
+    transform: scaleX(-1);
+  }
+}
+
+.utility-button__icon {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  background: #353535;
+  border: 1px solid $white;
+  border-radius: 20px;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  transition: background 200ms ease;
+
+  svg {
+    fill: $white;
+    width: 18px;
+    height: auto;
+    transition: transform 150ms ease;
+  }
+}
+
+.utility-button__label {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}

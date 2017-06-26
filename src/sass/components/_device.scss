@@ -2,21 +2,42 @@
  * Define the device styles.
  */
 
+.config-wrapper {
+  height: 100vh;
+  min-width: 1550px;
+  overflow-x: scroll;
+  background: #1B1B1B;
+  background-image: radial-gradient(48% 160%, #4E4E4E 60%, #232424 100%);
+  padding: 30px 30px 20px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.config-title {
+  padding-bottom: 30px;
+  color: $white;
+  letter-spacing: 1px;
+  font-family: $sans;
+  font-size: 1.8rem; // 18px
+  font-weight: 400;
+}
+
 .device-title {
   text-align: center;
   font-size: 3.2rem;
   color: #444;
- }
+}
 
 .device {
   position: relative;
   margin: 0 auto;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 3em 3em;
+  text-align: center;
 }
 
-.device {
-  margin: 3em 0;
-  width: 100%;
-  text-align: center;
+.device-controls {
+  position: relative;
 }
 
 .device-image-wrapper {

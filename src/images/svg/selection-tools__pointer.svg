@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29 29">
+  <defs>
+    <clipPath id="a">
+      <path d="M23.7,20.1a.8.8,0,0,1,0,1.2l-2.5,2.5-.6.2-.6-.2-5-5L13,22.3a.8.8,0,0,1-1.5-.1L5.1,6.2A.8.8,0,0,1,6.2,5.1l16,6.4a.8.8,0,0,1,.1,1.5l-3.6,2.1Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <title>selection-tool__pointer</title>
+  <g clip-path="url(#a)">
+    <rect width="29" height="29" fill=""/>
+  </g>
+</svg>

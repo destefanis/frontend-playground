@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.6 17.1">
+  <title>selection-tools__eraser</title>
+  <g>
+    <path d="M5.7.8h6.7a.7.7,0,0,1,.7.7v14a.8.8,0,0,1-.8.8H5a0,0,0,0,1,0,0V1.6A.8.8,0,0,1,5.7.8Z" transform="translate(8.7 -3.9) rotate(45)" fill="none" stroke="" stroke-miterlimit="10"/>
+    <path d="M8.5,2h6.7a.7.7,0,0,1,.7.7v7a0,0,0,0,1,0,0H7.7a0,0,0,0,1,0,0v-7A.7.7,0,0,1,8.5,2Z" transform="translate(7.6 -6.6) rotate(45)" stroke=""/>
+  </g>
+</svg>

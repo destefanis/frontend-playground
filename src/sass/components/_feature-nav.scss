@@ -1,0 +1,40 @@
+.features {
+  display: block;
+  margin: 0 auto 2em;
+  text-align: center;
+}
+
+.features__heading {
+  margin-bottom: 10px;
+  color: $white;
+  letter-spacing: 0.5px;
+  font-size: 1.4rem;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0; // whitespace fix
+}
+
+.feature__list-item {
+  display: inline-block;
+  min-width: 120px;
+  padding: 12px 20px;
+  background: #353535;
+  color: $white;
+  text-align: center;
+  font-size: 1.4rem; // 12px
+  letter-spacing: 0.5px;
+  transition: background 200ms ease;
+  cursor: pointer;
+
+  &:hover {
+    background: #252525;
+  }
+
+  &.is-active {
+    background: #212121;
+  }
+}
