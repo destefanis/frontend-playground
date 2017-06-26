@@ -22,7 +22,7 @@
   display: inline-block;
   min-width: 120px;
   padding: 12px 20px;
-  background: #353535;
+  background: #2f2f2f;
   color: $white;
   text-align: center;
   font-size: 1.4rem; // 12px
@@ -31,7 +31,7 @@
   cursor: pointer;
 
   &:hover {
-    background: #252525;
+    background: #212121;
   }
 
   &.is-active {
