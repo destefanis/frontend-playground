@@ -37,6 +37,18 @@
   }
 }
 
+// Cursor Icon Adjustment
+.selection-tool--cursor {
+  .selection-tool__icon {
+    margin-right: 14px;
+
+    svg {
+      height: 16px;
+      width: 16px;
+    }
+  }
+}
+
 // Dropdown Variant
 .selection-tool--dropdown {
   position: relative;
