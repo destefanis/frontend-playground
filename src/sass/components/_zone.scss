@@ -1,0 +1,68 @@
+
+.new-wrapper {
+  position: relative;
+  height: 384px;
+}
+
+.image {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 384px;
+  width: auto;
+  z-index: 1;
+
+  @include min($xlarge) {
+    height: 500px;
+  }
+}
+
+.zone-wrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 118px;
+  left: 130px;
+
+  @include min($xlarge) {
+    top: 154px;
+    left: 169px;
+  }
+}
+
+.zone {
+  height: 36px;
+  width: 36px;
+  border: 2px solid #f00;
+  border-radius: 5px;
+  z-index: 2;
+  transition: border-color 75ms ease;
+  cursor: pointer;
+  margin-right: 3px;
+  margin-left: 3px;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  @include min($xlarge) {
+    border-color: blue;
+    height: 48px;
+    width: 48px;
+    margin-right: 3px;
+    margin-left: 3.5px;
+  }
+
+  &:hover {
+    border-color: $white;
+  }
+}
+
+.zone--large {
+  width: 76px;
+
+  @include min($xlarge) {
+    width: 106px;
+  }
+}
